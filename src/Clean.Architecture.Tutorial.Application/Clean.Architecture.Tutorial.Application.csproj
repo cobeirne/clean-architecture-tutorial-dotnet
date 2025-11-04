@@ -9,8 +9,7 @@
   <ItemGroup>
     <Folder Include="DTOs\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Validators\" />
-    <Folder Include="UseCases\" />
+    <Folder Include="Features\" />
   </ItemGroup>
 
   <ItemGroup>
