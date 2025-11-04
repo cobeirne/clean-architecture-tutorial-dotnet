@@ -1,3 +1,4 @@
+using Clean.Architecture.Tutorial.Application.Features.Time;
 using MediatR;
 
 namespace Clean.Architecture.Tutorial.WebAPI
@@ -10,12 +11,12 @@ namespace Clean.Architecture.Tutorial.WebAPI
 
             // Add services to the container.
 
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetTimeQuery).Assembly));
+            
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
 
             var app = builder.Build();
 
