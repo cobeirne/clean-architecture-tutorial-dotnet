@@ -1,3 +1,4 @@
+using MediatR;
 
 namespace Clean.Architecture.Tutorial.WebAPI
 {
@@ -14,6 +15,8 @@ namespace Clean.Architecture.Tutorial.WebAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -26,7 +29,6 @@ namespace Clean.Architecture.Tutorial.WebAPI
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

@@ -28,10 +28,10 @@ Each layer has a distinct purpose and dependency direction:
 
 ### Layers Explained
 
-- **Domain (Core)**: Core business logic and entities. Contains enterprise-wide rules and models, independent of frameworks.  
+- **Domain**: Core business logic and entities. Contains enterprise-wide rules and models, independent of frameworks.  
 - **Application**: Coordinates domain logic using use cases, interfaces, and service definitions. Depends only on Domain.  
 - **Infrastructure**: Implements external concerns such as database access, APIs, and file systems. Depends on both Domain and Application.  
-- **Presentation (Web API)**: The entry point that handles HTTP requests, exposes endpoints, and invokes Application services. Depends on Domian, Application and Infrastruture.
+- **Presentation**: The entry point that handles HTTP requests, exposes endpoints, and invokes Application services. Depends on Domian, Application and Infrastruture.
 
 ---
 
@@ -68,7 +68,7 @@ dotnet run --project src/Clean.Architecture.Tutorial.WebAPI
 
 Once running, navigate to:
 ```
-https://localhost:5001/swagger
+http://localhost:5139/swagger/index.html
 ```
 
 You’ll find a pre-configured **Swagger UI** with sample endpoints demonstrating basic CRUD operations implemented through the clean architecture layers.
