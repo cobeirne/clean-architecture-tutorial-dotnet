@@ -110,4 +110,5 @@ See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
-- [Clean Architecture by Robert C. Martin](https://blog.cleancoder.com/) — the foundation of this pattern  
+- [Clean Architecture by Robert C. Martin](https://blog.cleancoder.com/) — the foundation of this pattern
+- Kent, G. H. (2025). C# 10 clean architecture with .NET 6: Mastering the art of building scalable and maintainable applications with Entity Framework Core and MediatR [Kindle edition]. Independently published.
