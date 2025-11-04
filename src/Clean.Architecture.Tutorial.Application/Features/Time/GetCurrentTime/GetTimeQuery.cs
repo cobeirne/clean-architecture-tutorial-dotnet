@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace Clean.Architecture.Tutorial.Application.Features.Time
+namespace Clean.Architecture.Tutorial.Application.Features.Time.GetCurrentTime
 {
     // Query (read-only request) returning a DTO
     public sealed record GetTimeQuery(string Timezone) : IRequest<TimeDto>;

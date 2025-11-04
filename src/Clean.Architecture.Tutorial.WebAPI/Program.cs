@@ -1,4 +1,5 @@
-using Clean.Architecture.Tutorial.Application.Features.Time;
+using Clean.Architecture.Tutorial.Application.Features.Time.GetCurrentTime;
+using Clean.Architecture.Tutorial.Application.Features.Time.SetTimezone;
 using MediatR;
 
 namespace Clean.Architecture.Tutorial.WebAPI
@@ -11,7 +12,8 @@ namespace Clean.Architecture.Tutorial.WebAPI
 
             // Add services to the container.
 
-            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetTimeQuery).Assembly));
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetTimeHandler).Assembly));
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(SetTimezoneHandler).Assembly));
             
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
